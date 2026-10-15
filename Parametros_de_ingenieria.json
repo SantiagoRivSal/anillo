@@ -1,0 +1,242 @@
+{
+  "brand": "LATAMinds",
+  "product": "MigraRing Bio",
+  "version": "3.0",
+  "dimensions_mm": {
+    "outer_diameter": 22.0,
+    "inner_diameter": 19.0,
+    "width": 8.5,
+    "radial_budget": 1.5
+  },
+  "energy": {
+    "voltage_V": 3.7,
+    "capacity_mAh_min": 20,
+    "capacity_mAh_max": 25,
+    "base_mW": [
+      2,
+      5
+    ],
+    "advanced_mW": [
+      4,
+      8
+    ],
+    "research_mW": [
+      6,
+      12
+    ],
+    "operating_goal_hours": 24,
+    "desired_hours": [
+      24,
+      48
+    ]
+  },
+  "components": {
+    "shell": {
+      "name": "Carcasa Ti grado 5",
+      "function": "Protección y diseño del anillo; titanio grado 5 mecanizado.",
+      "power": "—",
+      "size": "Ø22 × 8,5 mm exterior",
+      "maturity": "Conceptual",
+      "risk": "Resistencia y tolerancias no verificadas."
+    },
+    "accent": {
+      "name": "Aro estético azul",
+      "function": "Ranura perimetral de identidad del producto.",
+      "power": "—",
+      "size": "Canal anular ilustrativo",
+      "maturity": "Conceptual",
+      "risk": "La emisión luminosa continua aumentaría consumo y complicaría sellado."
+    },
+    "fasteners": {
+      "name": "Detalles y registros",
+      "function": "Topes, referencias visuales y guías internas.",
+      "power": "—",
+      "size": "Submilimétricos (CAD conceptual)",
+      "maturity": "Conceptual",
+      "risk": "No son uniones mecánicas calculadas."
+    },
+    "branding": {
+      "name": "Marca LATAMinds",
+      "function": "Identidad del equipo en el visor y micrograbado lateral del anillo.",
+      "power": "—",
+      "size": "Texto tangente submilimétrico",
+      "maturity": "Conceptual",
+      "risk": "Marcado visual de presentación, pendiente decisión de fabricación."
+    },
+    "liner": {
+      "name": "PEEK médico",
+      "function": "Revestimiento de contacto y aislamiento eléctrico.",
+      "power": "—",
+      "size": "Ø19 mm interior nominal",
+      "maturity": "Conceptual",
+      "risk": "Validar biocompatibilidad, adhesivos y fabricación."
+    },
+    "seal": {
+      "name": "Sistema de sellado",
+      "function": "Juntas elastoméricas y elementos encapsulados contra humedad.",
+      "power": "—",
+      "size": "Dimensiones preliminares",
+      "maturity": "Conceptual",
+      "risk": "IP68 es objetivo, NO certificado ni ensayado."
+    },
+    "rfwindow": {
+      "name": "Ventana RF aislante",
+      "function": "Zona dieléctrica para permitir que funcione la antena BLE con carcasa metálica.",
+      "power": "—",
+      "size": "~3 × 1,5 mm ilustrativo",
+      "maturity": "Conceptual",
+      "risk": "Pendiente simulación de RF y ensayo de alcance."
+    },
+    "pcb": {
+      "name": "PCB flexible poliimida",
+      "function": "Conecta sensores, control, potencia, antena y memorias.",
+      "power": "—",
+      "size": "Anillo curvo / desarrollo ~57 mm conceptual",
+      "maturity": "Conceptual",
+      "risk": "No hay netlist, reglas DFM ni stack-up validado."
+    },
+    "copper": {
+      "name": "Cobre: pistas y pads",
+      "function": "Metalización, pads y vías de la PCB flexible.",
+      "power": "—",
+      "size": "~0,075–0,1 mm pistas ilustrativas",
+      "maturity": "Conceptual",
+      "risk": "El trazado no representa circuitos eléctricamente comprobados."
+    },
+    "passives": {
+      "name": "Pasivos SMD",
+      "function": "Desacoplo, filtrado, acondicionamiento analógico y protección.",
+      "power": "—",
+      "size": "0201/0402 conceptual",
+      "maturity": "Conceptual",
+      "risk": "No hay esquema, códigos comerciales ni PCB validada."
+    },
+    "battery": {
+      "name": "Batería curva recargable",
+      "function": "Almacena energía de una celda nominal 3,7 V.",
+      "power": "—",
+      "size": "20–25 mAh; referencia visual 14 × 6 × 2 mm",
+      "maturity": "Conceptual",
+      "risk": "Espesor de 2 mm NO entra en pared radial de 1,5 mm: volumen CAD es ilustrativo. Capacidad no demostrada."
+    },
+    "charge": {
+      "name": "Carga y protección",
+      "function": "Interfaz de recarga y protección contra sobrecarga, descarga y calor.",
+      "power": "—",
+      "size": "Contactos de base propuestos",
+      "maturity": "Conceptual",
+      "risk": "Elegir inductiva o contactos y certificar estanqueidad. Objetivo carga 60–90 min sin validar."
+    },
+    "mcu": {
+      "name": "MCU ultra bajo consumo + BLE",
+      "function": "Adquisición, sincronización Bluetooth Low Energy y lógica local.",
+      "power": "MCU 0,2–2 mW; BLE 0,1–3 mW",
+      "size": "Referencia visual 8 × 8 × 1,0 mm (conflicto de integración)",
+      "maturity": "Conceptual",
+      "risk": "Componente real no seleccionado; tamaño y RF se deben justificar."
+    },
+    "pmic": {
+      "name": "PMIC / energía",
+      "function": "Gestiona tensión, estado de batería y carga.",
+      "power": "Pérdidas bajas, por cuantificar",
+      "size": "Por definir",
+      "maturity": "Conceptual",
+      "risk": "No hay topología ni presupuesto de pérdidas medido."
+    },
+    "flash": {
+      "name": "Memoria local",
+      "function": "Registra datos antes del envío BLE por lotes.",
+      "power": "<0,1 mW promedio (estimación)",
+      "size": "Por definir",
+      "maturity": "Conceptual",
+      "risk": "Memoria real, capacidad de datos y retención por seleccionar."
+    },
+    "antenna": {
+      "name": "Antena BLE integrada",
+      "function": "Comunicación a 2,4 GHz mediante región dieléctrica.",
+      "power": "Incluida en consumo BLE",
+      "size": "Meandro flex (ilustrativo)",
+      "maturity": "Conceptual",
+      "risk": "Antena junto a titanio y piel: imprescindible simulación."
+    },
+    "ppg": {
+      "name": "PPG multiespectral",
+      "function": "Pulso, señales vasculares periféricas y proxies de variabilidad; LEDs verde, rojo e IR.",
+      "power": "1–5 mW medio; picos 10–20 mW",
+      "size": "Referencia 5 × 4 × 1,2 mm",
+      "maturity": "Conceptual",
+      "risk": "HRV derivada de pulsos no es ECG/HRV directa. Validar calidad óptica y movimiento."
+    },
+    "lightbaffle": {
+      "name": "Separadores ópticos",
+      "function": "Evitan acoplamiento directo entre LEDs y fotodetector.",
+      "power": "—",
+      "size": "Microbarreras alrededor del PPG",
+      "maturity": "Conceptual",
+      "risk": "Diseño óptico pendiente de simulación y prototipo."
+    },
+    "temp": {
+      "name": "Temperatura cutánea",
+      "function": "Seguimiento térmico de piel y variación circadiana.",
+      "power": "0,01–0,1 mW",
+      "size": "Referencia 1,5 × 1,5 × 0,6 mm",
+      "maturity": "Conceptual",
+      "risk": "No mide directamente la temperatura corporal central."
+    },
+    "mems": {
+      "name": "Acelerómetro MEMS 3 ejes",
+      "function": "Movimiento, actividad, descanso y descarte de artefactos.",
+      "power": "0,02–0,2 mW",
+      "size": "Referencia 2 × 2 × 0,95 mm",
+      "maturity": "Conceptual",
+      "risk": "Frecuencia de muestreo y consumo efectivo pendientes."
+    },
+    "eda": {
+      "name": "Electrodos EDA / bioimpedancia",
+      "function": "Respuesta electrodermal y características del contacto.",
+      "power": "EDA 0,05–0,5 mW; bioimpedancia 0,1–1 mW",
+      "size": "Dos contactos de piel propuestos",
+      "maturity": "Conceptual",
+      "risk": "Contacto/sudor/humedad introducen variabilidad considerable."
+    },
+    "pressure": {
+      "name": "Presión flexible / grafeno I+D",
+      "function": "Estima ajuste del anillo y posibles artefactos por presión.",
+      "power": "0,01–0,2 mW",
+      "size": "Referencia 5 × 2 × 0,2 mm",
+      "maturity": "Conceptual",
+      "risk": "Elemento piezorresistivo de grafeno hipotético; falta validación."
+    },
+    "fluid": {
+      "name": "Microfluídica de sudor (I+D)",
+      "function": "Capilares pasivos para muestras de sudor en el dedo.",
+      "power": "~0 mW si pasiva",
+      "size": "Referencia cartucho 10 × 3 × 1 mm",
+      "maturity": "Experimental",
+      "risk": "La cantidad de sudor, evaporación y microcanales no se han demostrado."
+    },
+    "biosensor": {
+      "name": "Biosensor químico (I+D)",
+      "function": "Detección electroquímica potencial de lactato, sodio y potasio.",
+      "power": "0,2–2 mW",
+      "size": "Por definir",
+      "maturity": "Experimental",
+      "risk": "Sensibilidad, selectividad, mantenimiento y valor predictivo sin validar."
+    },
+    "cgrp": {
+      "name": "CGRP (hipótesis futura)",
+      "function": "Investigación de detección no invasiva de CGRP relacionada con migraña.",
+      "power": "0,5–5 mW, hipotético",
+      "size": "Por definir; NO módulo comercial",
+      "maturity": "Hipótesis I+D",
+      "risk": "No existe solución validada integrada en este anillo. No afirmar que mide CGRP."
+    }
+  },
+  "notes": [
+    "No hay predicción clínica ni algoritmo calibrado dentro del visor: solo modelo 3D y documentación.",
+    "Los valores de consumo proceden de estimaciones conceptuales proporcionadas para presentación técnica.",
+    "La batería de referencia de 2 mm es mayor que el espacio radial nominal de 1,5 mm.",
+    "El modelo CAD está pensado para comunicación y diseño I+D, no para fabricación ni ensayos regulatorios.",
+    "La carcasa IP68 y la autonomía 24–48h son objetivos a demostrar."
+  ]
+}
